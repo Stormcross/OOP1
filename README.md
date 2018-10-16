@@ -1,2 +1,2 @@
 # OOP1
-Vijezba i zadaci iz predmeta Objektno Orijentirano programiranje 1
+Vjezba i zadaci iz predmeta Objektno Orijentirano programiranje 1
