@@ -23,9 +23,9 @@ namespace Zadatak1_OOP1
                 Console.WriteLine("Arg[{0}]=[{1}]", i, args[i]);
             }
 
-            foreach (var a in args)
+            foreach (var test in args)
             {
-                Console.WriteLine(a);
+                Console.WriteLine(test);
             }
             /*Doradite program tako da za dohvat i ispis argumenata iz
             komandne linije koristi razred
