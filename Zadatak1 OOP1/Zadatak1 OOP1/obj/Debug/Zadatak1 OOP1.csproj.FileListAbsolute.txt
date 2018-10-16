@@ -1,0 +1,7 @@
+F:\Vijezba skola\Zadatak1 OOP1\Zadatak1 OOP1\bin\Debug\Zadatak1 OOP1.exe.config
+F:\Vijezba skola\Zadatak1 OOP1\Zadatak1 OOP1\bin\Debug\Zadatak1 OOP1.exe
+F:\Vijezba skola\Zadatak1 OOP1\Zadatak1 OOP1\bin\Debug\Zadatak1 OOP1.pdb
+F:\Vijezba skola\Zadatak1 OOP1\Zadatak1 OOP1\obj\Debug\Zadatak1 OOP1.csprojAssemblyReference.cache
+F:\Vijezba skola\Zadatak1 OOP1\Zadatak1 OOP1\obj\Debug\Zadatak1 OOP1.csproj.CoreCompileInputs.cache
+F:\Vijezba skola\Zadatak1 OOP1\Zadatak1 OOP1\obj\Debug\Zadatak1 OOP1.exe
+F:\Vijezba skola\Zadatak1 OOP1\Zadatak1 OOP1\obj\Debug\Zadatak1 OOP1.pdb
