@@ -1,0 +1,10 @@
+F:\GIT\Vijezba skola\OOP1\DomaVjezba\SimpleCalc\SimpleCalc\bin\Debug\SimpleCalc.exe.config
+F:\GIT\Vijezba skola\OOP1\DomaVjezba\SimpleCalc\SimpleCalc\bin\Debug\SimpleCalc.exe
+F:\GIT\Vijezba skola\OOP1\DomaVjezba\SimpleCalc\SimpleCalc\bin\Debug\SimpleCalc.pdb
+F:\GIT\Vijezba skola\OOP1\DomaVjezba\SimpleCalc\SimpleCalc\obj\Debug\SimpleCalc.csprojAssemblyReference.cache
+F:\GIT\Vijezba skola\OOP1\DomaVjezba\SimpleCalc\SimpleCalc\obj\Debug\SimpleCalc.Form1.resources
+F:\GIT\Vijezba skola\OOP1\DomaVjezba\SimpleCalc\SimpleCalc\obj\Debug\SimpleCalc.Properties.Resources.resources
+F:\GIT\Vijezba skola\OOP1\DomaVjezba\SimpleCalc\SimpleCalc\obj\Debug\SimpleCalc.csproj.GenerateResource.cache
+F:\GIT\Vijezba skola\OOP1\DomaVjezba\SimpleCalc\SimpleCalc\obj\Debug\SimpleCalc.csproj.CoreCompileInputs.cache
+F:\GIT\Vijezba skola\OOP1\DomaVjezba\SimpleCalc\SimpleCalc\obj\Debug\SimpleCalc.exe
+F:\GIT\Vijezba skola\OOP1\DomaVjezba\SimpleCalc\SimpleCalc\obj\Debug\SimpleCalc.pdb
