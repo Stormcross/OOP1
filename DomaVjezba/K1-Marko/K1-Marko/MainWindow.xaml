@@ -1,0 +1,155 @@
+﻿<Window x:Class="K1_Marko.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:K1_Marko"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+  
+    <Grid>
+        <!--Stupci-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1.5*"/>
+
+        </Grid.ColumnDefinitions>
+        <!--Redovi-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        
+        <!--Boja label+textbox-->
+        <Label Content="Boja: " 
+               Grid.Column="1" 
+               Grid.Row="1"
+               HorizontalAlignment="Left" 
+               Margin="0" 
+               VerticalAlignment="Bottom" 
+               Height="50  "    Grid.ColumnSpan="1 "
+               FontSize="20"/>
+
+        <TextBox 
+            Grid.Column="1"
+            Grid.Row="1"
+            Name="textBoxBoja"
+            HorizontalAlignment="Left"
+            Margin="60,9,0,8"
+            VerticalAlignment="Center"
+            Grid.RowSpan="1"    Grid.ColumnSpan="3"
+            FontSize="20" Width="235"/>
+        
+        <!--kolicina label+textbox-->
+        <Label Content="Kolicina: " 
+               Grid.Column="4" 
+               Grid.Row="1"
+               HorizontalAlignment="Right" 
+               Margin="0,0,0,0" 
+               VerticalAlignment="Bottom" 
+               Height="50  "    Grid.ColumnSpan="1 "
+               FontSize="20"/>
+
+        <TextBox 
+            Grid.Column="5  "
+            Grid.Row="1"
+            Name="textBoxKolicina"
+            HorizontalAlignment="Left"
+            Margin="5,9,0,8"
+            VerticalAlignment="Center"
+            Grid.RowSpan="1"    Grid.ColumnSpan="1"
+            FontSize="20" Width="110"/>
+        
+        <!--zbroj label+textbox-->
+        <Label Content="Zbroj kolicine svih jabuka: " 
+               Grid.Column="1" 
+               Grid.Row="3"
+               HorizontalAlignment="Left" 
+               Margin="0,0,0,0" 
+               VerticalAlignment="Center" 
+               Height="50  "    Grid.ColumnSpan="3 "
+               FontSize="20"/>
+
+        <TextBox 
+            Grid.Column="3"
+            Grid.Row="3"
+            Name="textBoxZbrojJabuka"
+            HorizontalAlignment="Left"
+            Margin="45,9,0,8"
+            VerticalAlignment="Center"
+            Grid.RowSpan="1"    Grid.ColumnSpan="3"
+            FontSize="20" Width="275"
+            />
+
+        <!--najmanje jabuka label+textbox-->
+        <Label Content="Najmanje je jabuka boje: " 
+               Grid.Column="1" 
+               Grid.Row="5"
+               HorizontalAlignment="Left" 
+               Margin="0,0,0,0" 
+               VerticalAlignment="Center" 
+               Height="50  "    Grid.ColumnSpan="3 "
+               FontSize="20"/>
+
+        <TextBox 
+            Grid.Column="3"
+            Grid.Row="5"
+            Name="textBoxNajmanjeJabuka"
+            HorizontalAlignment="Left"
+            Margin="45,9,0,8"
+            VerticalAlignment="Center"
+            Grid.RowSpan="1"    Grid.ColumnSpan="3"
+            FontSize="20" Width="275"
+            />
+        
+        <!--operacijske tipke-->
+        
+        <!-- Zapamti -->
+        <Button
+            Name="buttonZapamtiBroj" 
+            Content="Zapamti"
+            Grid.Column="6"
+            Grid.Row="1"
+            Grid.ColumnSpan="1"
+            Grid.RowSpan="1"
+            Margin="10"
+            FontSize="20" Click="ButtonZapamtiBroj_Click"
+            ></Button>
+
+        <!-- Izracunaj -->
+        <Button
+            Name="buttonIzracunajKolicinaSvih" 
+            Content="Izracunaj"
+            Grid.Column="6"
+            Grid.Row="3"
+            Grid.ColumnSpan="1"
+            Grid.RowSpan="1"
+            Margin="10"
+            FontSize="20" Click="buttonIzracunajKolicinaSvih_Click"
+            ></Button>
+
+        <!-- Pretrazi -->
+        <Button
+            Name="buttonPretrazi" 
+            Content="Pretrazi"
+            Grid.Column="6"
+            Grid.Row="5"
+            Grid.ColumnSpan="1"
+            Grid.RowSpan="1"
+            Margin="10"
+            FontSize="20" Click="buttonPretrazi_Click"
+            ></Button>
+
+    </Grid>
+</Window>
