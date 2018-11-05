@@ -36,26 +36,12 @@ namespace VA_AR
 
         }
 
-        public int IndexOdabrano = 0;
+
         
-
-        private void buttonHtcVive_Click(object sender, RoutedEventArgs e)
-        {
-            IndexOdabrano = 0;
-            ObjekPremaIndexu(IndexOdabrano);
-                                             
-            VR_odabrano vR_Odabrano = new VR_odabrano();
-
-            vR_Odabrano.Show();
-
-
-
-        }
-
-        public void ObjekPremaIndexu(int index)
+        public  List<string> ObjekPremaIndexu(int index)
         {
             InformacijeClass obIspisa = new InformacijeClass();
-
+            
             obIspisa = VR_info[index];
 
             List<string> parametriObjekta = new List<string>()
@@ -72,7 +58,7 @@ namespace VA_AR
                 obIspisa.Cijena
             };
 
-
+            return parametriObjekta;
         }
 
         private void HTC_Vive()
@@ -89,9 +75,10 @@ namespace VA_AR
             obHTCvive.PlatformaHardware = "PC";
             obHTCvive.PlatformaSoftware = "SteamVR";
             obHTCvive.Cijena = "499";
-            
+
             VR_info.Add(obHTCvive);
 
+            
         }
 
         private void Oculus_Rift()
@@ -104,7 +91,7 @@ namespace VA_AR
             obOculusRift.Rezolucija = "1080 x 1200 per eye";
             obOculusRift.RefreshRate = "90 Hz";
             obOculusRift.Senzori = "Motion, camera, external visual positioning ";
-            obOculusRift.Kontroleri = "Oculus Touch, Xbox One gamepa";
+            obOculusRift.Kontroleri = "Oculus Touch, Xbox One gamepad";
             obOculusRift.PlatformaHardware = "PC";
             obOculusRift.PlatformaSoftware = "Oculus";
             obOculusRift.Cijena = "399";
@@ -206,6 +193,54 @@ namespace VA_AR
 
             VR_info.Add(obHTCvivePro);
 
+        }
+
+        public int IndexOdabrano = 0;
+
+        private void buttonHtcVive_Click(object sender, RoutedEventArgs e)
+        {
+            //index po kojem nademo parametre
+            IndexOdabrano = 0;
+
+
+            foreach (var item in ObjekPremaIndexu(IndexOdabrano))
+            {
+                Console.WriteLine(item);
+            }
+
+            VR_odabrano vR_Odabrano = new VR_odabrano();
+            vR_Odabrano.Show();
+
+        }
+
+        private void buttonOculusRift_Click(object sender, RoutedEventArgs e)
+        {
+            //index po kojem nademo parametre
+            IndexOdabrano = 1;
+
+
+            foreach (var item in ObjekPremaIndexu(IndexOdabrano))
+            {
+                Console.WriteLine(item);
+            }
+
+            VR_odabrano vR_Odabrano = new VR_odabrano();
+            vR_Odabrano.Show();
+        }
+
+        private void buttonPSvr_Click(object sender, RoutedEventArgs e)
+        {
+            //index po kojem nademo parametre
+            IndexOdabrano = 2;
+
+
+            foreach (var item in ObjekPremaIndexu(IndexOdabrano))
+            {
+                Console.WriteLine(item);
+            }
+
+            VR_odabrano vR_Odabrano = new VR_odabrano();
+            vR_Odabrano.Show();
         }
     }
 }

@@ -7,10 +7,7 @@
         mc:Ignorable="d"
         Title="VR_odabrano" Height="800" Width="500">
     <Grid>
-        <ListBox HorizontalAlignment="Left" 
-                 Height="247" Margin="86,68,0,0" 
-                 VerticalAlignment="Top" Width="157"
-                 ></ListBox>
+      
 
     </Grid>
 </Window>

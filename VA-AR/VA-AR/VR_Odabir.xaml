@@ -42,5 +42,39 @@
                Source="https://brain-images-ssl.cdn.dixons.com/6/5/10144056/u_10144056.jpg"
                ></Image>
 
+        <Button Name="buttonOculusRift"
+                Grid.Column="0"
+                Grid.Row="2"
+                Content="OculusRift"
+                Margin="10"
+                FontSize="25"
+                FontWeight="DemiBold"
+                FontStyle="Oblique"
+                Background="LightCoral" Click="buttonOculusRift_Click" 
+                ></Button>
+        <Image Name="imageOdabirOculusRift"
+               Grid.Column="1"
+               Grid.Row="2"
+               HorizontalAlignment="Left"
+               Source="https://images-na.ssl-images-amazon.com/images/I/61ueGFutGgL._AC_.jpg"
+               ></Image>
+
+        <Button Name="buttonPSvr"
+                Grid.Column="0"
+                Grid.Row="3"
+                Content="Playstation VR"
+                Margin="10"
+                FontSize="25"
+                FontWeight="DemiBold"
+                FontStyle="Oblique"
+                Background="LightCoral" Click="buttonPSvr_Click" 
+                ></Button>
+        <Image Name="imageOdabirPSvr"
+               Grid.Column="1"
+               Grid.Row="3"
+               HorizontalAlignment="Left"
+               Source="https://psmedia.playstation.com/is/image/psmedia/ps-vr-zvr2-model-product-shots-screen-02-ps4-eu-17nov17?$MediaCarousel_Original$"
+               ></Image>
+
     </Grid>
 </Window>
