@@ -41,13 +41,9 @@ namespace VA_AR
 
         private void buttonHtcVive_Click(object sender, RoutedEventArgs e)
         {
-            IndexOdabrano = 2;
+            IndexOdabrano = 0;
             ObjekPremaIndexu(IndexOdabrano);
-            
-
-
-
-
+                                             
             VR_odabrano vR_Odabrano = new VR_odabrano();
 
             vR_Odabrano.Show();
@@ -56,17 +52,26 @@ namespace VA_AR
 
         }
 
-        private List<string> ObjekPremaIndexu(int index)
+        public void ObjekPremaIndexu(int index)
         {
             InformacijeClass obIspisa = new InformacijeClass();
 
             obIspisa = VR_info[index];
 
-            List<string> parametriObjekta = new List<string>();
+            List<string> parametriObjekta = new List<string>()
+            {
+                obIspisa.Ime,
+                obIspisa.TipHeadseta,
+                obIspisa.TipUSB,
+                obIspisa.Rezolucija,
+                obIspisa.RefreshRate,
+                obIspisa.Senzori,
+                obIspisa.Kontroleri,
+                obIspisa.PlatformaHardware,
+                obIspisa.PlatformaSoftware,
+                obIspisa.Cijena
+            };
 
-            
-
-            return parametriObjekta; //zelimo sve parametre ubaciti u listu novu, jos treba provjeriti jel to opce potrebno
 
         }
 

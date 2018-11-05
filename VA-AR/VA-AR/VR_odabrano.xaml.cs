@@ -20,18 +20,12 @@ namespace VA_AR
     public partial class VR_odabrano : Window
     {
 
-        
-
         public VR_odabrano()
         {
             InitializeComponent();
 
-           
 
         }
-                 
-       
-
         
     }
 }
