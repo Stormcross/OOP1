@@ -1,0 +1,46 @@
+﻿<Window x:Class="VA_AR.VR_Odabir"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VA_AR"
+        mc:Ignorable="d"
+        Title="VR_Odabir" Height="800" Width="500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.7*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+        <Button Name="buttonHtcVive"
+                Grid.Column="0"
+                Grid.Row="1"
+                Content="HTC Vive"
+                Margin="10"
+                FontSize="25"
+                FontWeight="DemiBold"
+                FontStyle="Oblique"
+                Background="LightCoral" Click="buttonHtcVive_Click" 
+                ></Button>
+        <Image Name="imageOdabirHtcVive"
+               Grid.Column="1"
+               Grid.Row="1"
+               HorizontalAlignment="Left"
+               Source="https://brain-images-ssl.cdn.dixons.com/6/5/10144056/u_10144056.jpg"
+               ></Image>
+
+    </Grid>
+</Window>
