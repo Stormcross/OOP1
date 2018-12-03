@@ -8,10 +8,18 @@ using System.Threading.Tasks;
 
 namespace Pismeni_Ispit_2017_07_13
 {
+    
     class Program
     {
         static void Main(string[] args)
         {
+            //aktiviramo strukturu
+            SpremljeniPodaciKugla Sp = new SpremljeniPodaciKugla();
+            Sp.KugleUStrukturi();
+
+            
+            
+
         }
     }
 }
