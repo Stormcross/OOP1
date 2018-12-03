@@ -36,7 +36,7 @@ namespace Pismeni_Ispit_2018_07_12
 
         public override string IspisiPodatke()
         {
-            string ispis = "Pravokutnik duljine stranica: " + a + " ," + b + "povrsine: " + IzracunajPovrsinu(a, b);
+            string ispis = "Pravokutnik duljine stranica: " + a + " ," + b + " povrsine: " + IzracunajPovrsinu();
             return ispis;
         }
     }
