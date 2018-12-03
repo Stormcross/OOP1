@@ -29,8 +29,9 @@ namespace Pismeni_Ispit_2018_07_12
 
         public override string IspisiPodatke()
         {
-            string ispis = "Kvadrat duljine stranica: " + a +  " povrsine: " + IzracunajPovrsinu();
-            return ispis;
+            //string ispis = "Kvadrat duljine stranica: " + a +  " povrsine: " + IzracunajPovrsinu();
+            //return ispis;
+            return String.Format("Kvadrat duljine stranica: " + a + " povrsine: " + IzracunajPovrsinu());
         }
 
     }

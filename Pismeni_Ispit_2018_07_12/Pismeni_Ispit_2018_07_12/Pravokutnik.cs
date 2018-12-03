@@ -34,10 +34,13 @@ namespace Pismeni_Ispit_2018_07_12
             return a * b;
         }
 
+
+
         public override string IspisiPodatke()
         {
-            string ispis = "Pravokutnik duljine stranica: " + a + " ," + b + " povrsine: " + IzracunajPovrsinu();
-            return ispis;
+            //string ispis = "Pravokutnik duljine stranica: " + a + " ," + b + " povrsine: " + IzracunajPovrsinu();
+            //return ispis;
+            return String.Format("Pravokutnik duljine stranica: " + a + " ," + b + " povrsine: " + IzracunajPovrsinu());
         }
     }
 }
