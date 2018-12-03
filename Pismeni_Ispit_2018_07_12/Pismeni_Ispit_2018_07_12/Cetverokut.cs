@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pismeni_Ispit_2018_07_12
 {
-    abstract class Cetverokut // 1.1
+    abstract public class Cetverokut // 1.1
     {
         protected float a;
         protected float b;

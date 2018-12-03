@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pismeni_Ispit_2018_07_12
 {
-    class Kvadrat:Cetverokut //1.3
+    public class Kvadrat:Cetverokut //1.3
     {
         public Kvadrat(float a) //konstruktor
         {

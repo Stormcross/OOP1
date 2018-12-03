@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pismeni_Ispit_2018_07_12
 {
-    class Pravokutnik : Cetverokut //1.2
+    public class Pravokutnik : Cetverokut //1.2
     {
         public Pravokutnik(float a, float b) //konstruktor
         {
