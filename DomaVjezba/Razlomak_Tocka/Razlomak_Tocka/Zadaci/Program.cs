@@ -14,9 +14,9 @@ namespace Razlomak_Tocka.Zadaci
         static void Main(string[] args)
         {
             //postavimo razlomke
-            Razlomak r1 = new Razlomak(15, 5);
-            Razlomak r2 = new Razlomak(5, 20);
-            Razlomak r3 = new Razlomak(24, 8);
+            Razlomak r1 = new Razlomak(5, 20);
+            Razlomak r2 = new Razlomak(10, 20);
+            Razlomak r3 = new Razlomak(24, 10);
             //dodavanje na listu razlomaka
             ListaRazlomaka.Add(r1);
             ListaRazlomaka.Add(r2);
@@ -27,8 +27,23 @@ namespace Razlomak_Tocka.Zadaci
             Console.WriteLine("Razlomak 3: {0} / {1} = {2}, razlomak ispravan: {3}", r3.VratiBrojnik(), r3.VratiNazivnik(), r3.PretvoriUFloat(), r3.Ispravan());
             //ispis po velicini
             Console.WriteLine("Ispis po velicini: ");
+            for (int i = 0; i < ListaRazlomaka.Count; i++)
+            {
+                //imamo r1 koji uspredujemo s r2, r3 i mjenjamo poziciju na listi
+                if (i + 1 == ListaRazlomaka.Count)
+                {
+                    break;
+                }
+
+                int test;
+                test = ListaRazlomaka[i].PretvoriUFloat().CompareTo(ListaRazlomaka[i + 1].PretvoriUFloat());
+                ListaRazlomaka[i] = ListaRazlomaka[i + test];
+
+
+            }
             foreach (Razlomak r in ListaRazlomaka)
             {
+
                 Console.Write(r.PretvoriUFloat() + ", ");
             }
             //Usporedba razlomaka

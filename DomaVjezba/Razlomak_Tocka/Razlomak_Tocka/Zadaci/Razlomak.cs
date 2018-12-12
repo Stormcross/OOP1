@@ -59,13 +59,14 @@ namespace Razlomak_Tocka.Zadaci
             }
             else if (PretvoriUFloat()<other.PretvoriUFloat())
             {
-                return -1;
+                return 0;
             }
             else
             {
                 return 0;
             }
         }
+
 
         public bool Equals(Razlomak other)
         {
