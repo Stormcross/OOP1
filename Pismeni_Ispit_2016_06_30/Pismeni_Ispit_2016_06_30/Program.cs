@@ -20,13 +20,16 @@ namespace Pismeni_Ispit_2016_06_30
             Console.WriteLine(o1.ispisiPodatke());
             Console.WriteLine(o2.ispisiPodatke());
             Console.WriteLine(o3.ispisiPodatke());
-
+            
             //Novi OIB
             UnesiNoviOIB(o1);
 
             //1.6.2
             Console.WriteLine(ProvjeraImePrezime(o2, o3));
             //Zavrseno 1.## dio ispita
+
+            Student student = new Student("11311178911", "Ivo", "Ivic");
+            Console.WriteLine(student.ispisiPodatke());
 
 
 

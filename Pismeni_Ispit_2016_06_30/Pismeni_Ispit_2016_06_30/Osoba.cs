@@ -8,9 +8,9 @@ namespace Pismeni_Ispit_2016_06_30
 {
     class Osoba : IEquatable<Osoba>
     {
-        private string OIB; //1.1
-        private string Ime;
-        private string Prezime;
+        protected string OIB; //1.1
+        protected string Ime;
+        protected string Prezime;
 
         public Osoba(string OIB, string Ime, string Prezime) //1.2
         {
@@ -51,9 +51,9 @@ namespace Pismeni_Ispit_2016_06_30
             else return String.Format("Greska pri unosu OIB-a");
         }
 
-        public string ispisiPodatke() //1.4
+        public virtual string ispisiPodatke() //1.4
         {
-            return String.Format("Osoba: {0,4} {1,4} Oib: {2}", Ime, Prezime, OIB);
+            return String.Format("Info: {0,4} {1,4} Oib: {2}", Ime, Prezime, OIB);
         }
 
         public bool Equals(Osoba other) //1.5
