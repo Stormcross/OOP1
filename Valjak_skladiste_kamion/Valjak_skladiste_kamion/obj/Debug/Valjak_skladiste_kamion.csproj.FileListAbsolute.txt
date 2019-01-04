@@ -1,7 +1,0 @@
-D:\Dokumenti\Programski kod - GIT\OOP1\Valjak_skladiste_kamion\Valjak_skladiste_kamion\bin\Debug\Valjak_skladiste_kamion.exe.config
-D:\Dokumenti\Programski kod - GIT\OOP1\Valjak_skladiste_kamion\Valjak_skladiste_kamion\bin\Debug\Valjak_skladiste_kamion.exe
-D:\Dokumenti\Programski kod - GIT\OOP1\Valjak_skladiste_kamion\Valjak_skladiste_kamion\bin\Debug\Valjak_skladiste_kamion.pdb
-D:\Dokumenti\Programski kod - GIT\OOP1\Valjak_skladiste_kamion\Valjak_skladiste_kamion\obj\Debug\Valjak_skladiste_kamion.csprojAssemblyReference.cache
-D:\Dokumenti\Programski kod - GIT\OOP1\Valjak_skladiste_kamion\Valjak_skladiste_kamion\obj\Debug\Valjak_skladiste_kamion.csproj.CoreCompileInputs.cache
-D:\Dokumenti\Programski kod - GIT\OOP1\Valjak_skladiste_kamion\Valjak_skladiste_kamion\obj\Debug\Valjak_skladiste_kamion.exe
-D:\Dokumenti\Programski kod - GIT\OOP1\Valjak_skladiste_kamion\Valjak_skladiste_kamion\obj\Debug\Valjak_skladiste_kamion.pdb
