@@ -1,0 +1,7 @@
+D:\Dokumenti\Programski kod - GIT\OOP1\Pisemni_Ispit_2016_07_14\Pisemni_Ispit_2016_07_14\obj\Debug\Pisemni_Ispit_2016_07_14.csprojAssemblyReference.cache
+D:\Dokumenti\Programski kod - GIT\OOP1\Pisemni_Ispit_2016_07_14\Pisemni_Ispit_2016_07_14\obj\Debug\Pisemni_Ispit_2016_07_14.csproj.CoreCompileInputs.cache
+D:\Dokumenti\Programski kod - GIT\OOP1\Pisemni_Ispit_2016_07_14\Pisemni_Ispit_2016_07_14\bin\Debug\Pisemni_Ispit_2016_07_14.exe.config
+D:\Dokumenti\Programski kod - GIT\OOP1\Pisemni_Ispit_2016_07_14\Pisemni_Ispit_2016_07_14\bin\Debug\Pisemni_Ispit_2016_07_14.exe
+D:\Dokumenti\Programski kod - GIT\OOP1\Pisemni_Ispit_2016_07_14\Pisemni_Ispit_2016_07_14\bin\Debug\Pisemni_Ispit_2016_07_14.pdb
+D:\Dokumenti\Programski kod - GIT\OOP1\Pisemni_Ispit_2016_07_14\Pisemni_Ispit_2016_07_14\obj\Debug\Pisemni_Ispit_2016_07_14.exe
+D:\Dokumenti\Programski kod - GIT\OOP1\Pisemni_Ispit_2016_07_14\Pisemni_Ispit_2016_07_14\obj\Debug\Pisemni_Ispit_2016_07_14.pdb
