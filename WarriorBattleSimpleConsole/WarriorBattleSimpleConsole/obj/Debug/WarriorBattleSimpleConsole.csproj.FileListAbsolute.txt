@@ -1,0 +1,7 @@
+D:\Dokumenti\Programski kod - GIT\OOP1\WarriorBattleSimpleConsole\WarriorBattleSimpleConsole\obj\Debug\WarriorBattleSimpleConsole.csprojAssemblyReference.cache
+D:\Dokumenti\Programski kod - GIT\OOP1\WarriorBattleSimpleConsole\WarriorBattleSimpleConsole\obj\Debug\WarriorBattleSimpleConsole.csproj.CoreCompileInputs.cache
+D:\Dokumenti\Programski kod - GIT\OOP1\WarriorBattleSimpleConsole\WarriorBattleSimpleConsole\bin\Debug\WarriorBattleSimpleConsole.exe.config
+D:\Dokumenti\Programski kod - GIT\OOP1\WarriorBattleSimpleConsole\WarriorBattleSimpleConsole\bin\Debug\WarriorBattleSimpleConsole.exe
+D:\Dokumenti\Programski kod - GIT\OOP1\WarriorBattleSimpleConsole\WarriorBattleSimpleConsole\bin\Debug\WarriorBattleSimpleConsole.pdb
+D:\Dokumenti\Programski kod - GIT\OOP1\WarriorBattleSimpleConsole\WarriorBattleSimpleConsole\obj\Debug\WarriorBattleSimpleConsole.exe
+D:\Dokumenti\Programski kod - GIT\OOP1\WarriorBattleSimpleConsole\WarriorBattleSimpleConsole\obj\Debug\WarriorBattleSimpleConsole.pdb
