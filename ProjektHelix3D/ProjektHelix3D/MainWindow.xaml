@@ -67,7 +67,7 @@
                     <Button x:Name="Cut" Command="Cut" Content="Cut"/>
                     <Button x:Name="Copy" Command="Copy" Content="Copy" />
                     <Button x:Name="Paste" Command="Paste" Content="Paste" />
-                    <Button x:Name="Undo" Command="Undo" Content="Undo" Cursor="Hand"></Button>
+                    <Button x:Name="Undo"  Content="Undo" Click="Undo_Click"/>
                 </ToolBar>
             </ToolBarTray>
         </DockPanel>

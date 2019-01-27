@@ -40,7 +40,7 @@ namespace ProjektHelix3D
             //postavke za pregled kamere,svjetla i grid za rad
             viewPort3D.DefaultCamera = new PerspectiveCamera(); //uzimamo kameru iz System.Windows.Media.Media3D;
             viewPort3D.DefaultCamera.Position = new Point3D(0, 0, 10); //postavljamo poziciju kamer eu prostoru
-            viewPort3D.DefaultCamera.LookDirection = new Vector3D(-1, 1, 0); //kordinate nagiba kamere
+            viewPort3D.DefaultCamera.LookDirection = new Vector3D(-1, -1.5, -0.5); //kordinate nagiba kamere
             viewPort3D.DefaultCamera.UpDirection = new Vector3D(0, 0, 1); //pokazuje gdje je gornji dio kamere
             viewPort3D.ShowFrameRate = true; //da vidimo framerate na kojem nam radi program
             viewPort3D.ShowCoordinateSystem = true; //pokazuje nam koordinatne osi
@@ -77,6 +77,7 @@ namespace ProjektHelix3D
             operacija = Operacije.CrtajKuglu;
         }
 
+
         // krecemo mis po podlogi
         private void viewPort3D_MouseMove(object sender, MouseEventArgs e)
         {
@@ -105,6 +106,15 @@ namespace ProjektHelix3D
                         break;
                 }
 
+            }
+        }
+
+        private void Undo_Click(object sender, RoutedEventArgs e)
+        {
+            //brisanje elemenata UNDO
+            if (viewPort3D.Items.Count>0)
+            {
+                viewPort3D.Items.RemoveAt(viewPort3D.Items.Count - 1);
             }
         }
 
@@ -155,6 +165,10 @@ namespace ProjektHelix3D
                 oblik.korak = GeometrijskoTijelo.Koraci.Definiran;
                 oblik = null;
             }
+            
+
+
+
         }
         //pustimo lijevu tipku
         private void viewPort3D_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -163,7 +177,7 @@ namespace ProjektHelix3D
             //oblik = null;
         }
 
-
+        
 
 
     }
