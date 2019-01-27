@@ -47,7 +47,7 @@
                         <xctk:ColorPicker.Background>
                             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                 <GradientStop Color="Black" Offset="0"/>
-                                <GradientStop Color="White" Offset="1"/>
+                                <GradientStop Color="#FFC9C0C0" Offset="1"/>
                             </LinearGradientBrush>
                         </xctk:ColorPicker.Background>
                     </xctk:ColorPicker>

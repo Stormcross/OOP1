@@ -10,58 +10,58 @@ namespace ProjektHelix3D.GeometrijskaTjela
 {
     class Kvadar : GeometrijskoTijelo
     {
-        private BoxVisual3D kvadar = new BoxVisual3D();
+        private BoxVisual3D objekt = new BoxVisual3D();
         //postavimo sve sto je u baznoj klazi zadano
         //Get-Set
         public override Point3D Centar
         {
             get
             {
-                return kvadar.Center;
+                return objekt.Center;
             }
 
             set
             {
-                kvadar.Center = value;
+                objekt.Center = value;
             }
         }
         public override double Duzina
         {
             get
             {
-                return kvadar.Width;
+                return objekt.Width;
             }
             set
             {
-                kvadar.Width = value;
+                objekt.Width = value;
             }
         }
         public override double Sirina
         {
             get
             {
-                return kvadar.Length;
+                return objekt.Length;
             }
             set
             {
-                kvadar.Length = value;
+                objekt.Length = value;
             }
         }
         public override double Visina
         {
             get
             {
-                return kvadar.Height;
+                return objekt.Height;
             }
             set
             {
-                kvadar.Height= value;
+                objekt.Height= value;
             }
         }
 
         private BoxVisual3D GetKvadar()
         {
-            return kvadar;
+            return objekt;
         }
 
         //Konstruktori
@@ -78,9 +78,14 @@ namespace ProjektHelix3D.GeometrijskaTjela
             this.Sirina = Sirina;
             this.Visina = Visina;
 
-            //kvadar.Length = Duzina;
-            //kvadar.Height = Visina;
-            //kvadar.Width = Sirina;
+            objekt.Length = Duzina;
+            objekt.Height = Visina;
+            objekt.Width = Sirina;
+        }
+
+        public override void Nacrtaj(HelixViewport3D hVp3D)
+        {
+            hVp3D.Items.Add(objekt);
         }
 
 

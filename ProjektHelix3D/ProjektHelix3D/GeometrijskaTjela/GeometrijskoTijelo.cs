@@ -9,14 +9,17 @@ using System.Windows.Media;
 
 namespace ProjektHelix3D.GeometrijskaTjela
 {
-    class GeometrijskoTijelo
+    abstract class GeometrijskoTijelo
     {
         //zajednicke stvari
-        protected Point3D startPoint; //pocetna tocka
-        protected Point3D endPoint; //zavrsna tocka
-        protected MeshElement3D oblik; //oblik koji postavljamo
-        protected Brush boja; //boja ispune
-        protected HelixViewport3D hv3d; //podloga na kojoj radimo
+        //protected Point3D startPoint; //pocetna tocka
+        //protected Point3D endPoint; //zavrsna tocka
+        //protected GeometryModel3D oblik; //oblik koji postavljamo
+        //private Color boja = new Color();
+        //protected Material materijal=new DiffuseMaterial(); //boja ispune
+        //protected HelixViewport3D hv3d; //podloga na kojoj radimo
+
+        public abstract void Nacrtaj(HelixViewport3D hVp3D);
 
         public enum Koraci
         {
@@ -26,32 +29,33 @@ namespace ProjektHelix3D.GeometrijskaTjela
             Duzina,
             Visina,
             Definiran
-        }; //pokusamo ovo izbaciti van
+        }; //za sad jedini nacin
 
-        public void Postavi(Point3D pocetak,Point3D kraj,Brush bojaIspune)
-        {
-            startPoint = pocetak;
-            endPoint = kraj;
-            boja = bojaIspune;
-        }
+        //public void Postavi(Point3D pocetak, Point3D kraj, HelixViewport3D podloga)
+        //{
+        //    startPoint = pocetak;
+        //    endPoint = kraj;
+        //    //materijal = bojaIspune;
+        //    hv3d = podloga;
+        //}
 
-        
+
         //metoda za prikaz na podlogi
-        public virtual void Nacrtaj()
-        {
-            //ako oblik koji crtamo nije na podlogi prvo ga dodaj
-            if (hv3d.Children.Contains(oblik))
-            {
-                hv3d.Children.Add(oblik); //oblik dodajemo na internu listu objekata
-            }
-            oblik.Fill = boja;
-        }
+        //public virtual void Nacrtaj()
+        //{
+        //    //ako oblik koji crtamo nije na podlogi prvo ga dodaj
+        //    if (hv3d.Items.Contains(oblik))
+        //    {
+        //        hv3d.Items.Add(oblik); //oblik dodajemo na internu listu objekata
+        //    }
+        //    //oblik.Material = boja;
+        //}
 
         public Koraci korak { get; set; } = Koraci.Nedifiniran;
 
-        public virtual Point3D Centar { get; set; }
-        public virtual double Sirina { get; set; }
-        public virtual double Duzina { get; set; }
-        public virtual double Visina { get; set; }
+        public abstract Point3D Centar { get; set; }
+        public abstract double Sirina { get; set; }
+        public abstract double Duzina { get; set; }
+        public abstract double Visina { get; set; }
     }
 }

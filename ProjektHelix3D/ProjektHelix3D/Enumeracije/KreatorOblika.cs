@@ -13,14 +13,15 @@ namespace ProjektHelix3D.Enumeracije
         {
             switch (operacija)
             {
-                //case Operacije.Pokazivac:
-                //    return ;
+                case Operacije.Pokazivac:
+                    return null;
                 case Operacije.CrtajKvadar:
                     return new Kvadar();
                 case Operacije.CrtajKvadrat:
-                    return null;
+                    return new Kvadrat();
                 case Operacije.CrtajKuglu:
-                    return null;
+                    return new Kugla();
+                    //return new Kugla();
                 default:
                     throw new ArgumentException("Nepostojeci oblik");
             }

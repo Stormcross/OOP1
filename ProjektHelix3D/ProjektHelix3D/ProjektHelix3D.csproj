@@ -90,7 +90,9 @@
     <Compile Include="Enumeracije\KreatorOblika.cs" />
     <Compile Include="Enumeracije\Operacije.cs" />
     <Compile Include="GeometrijskaTjela\GeometrijskoTijelo.cs" />
+    <Compile Include="GeometrijskaTjela\Kugla.cs" />
     <Compile Include="GeometrijskaTjela\Kvadar.cs" />
+    <Compile Include="GeometrijskaTjela\Kvadrat.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

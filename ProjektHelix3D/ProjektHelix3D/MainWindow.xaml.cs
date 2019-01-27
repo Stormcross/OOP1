@@ -16,6 +16,7 @@ using HelixToolkit.Wpf;
 using System.Windows.Media.Media3D;
 using ProjektHelix3D.Enumeracije;
 using ProjektHelix3D.GeometrijskaTjela;
+using Xceed.Wpf.Toolkit;
 
 namespace ProjektHelix3D
 {
@@ -38,8 +39,8 @@ namespace ProjektHelix3D
             InitializeComponent();
             //postavke za pregled kamere,svjetla i grid za rad
             viewPort3D.DefaultCamera = new PerspectiveCamera(); //uzimamo kameru iz System.Windows.Media.Media3D;
-            viewPort3D.DefaultCamera.Position = new Point3D(5, 5, 5); //postavljamo poziciju kamer eu prostoru
-            viewPort3D.DefaultCamera.LookDirection = new Vector3D(-1, -1, -1); //kordinate nagiba kamere
+            viewPort3D.DefaultCamera.Position = new Point3D(0, 0, 10); //postavljamo poziciju kamer eu prostoru
+            viewPort3D.DefaultCamera.LookDirection = new Vector3D(-1, 1, 0); //kordinate nagiba kamere
             viewPort3D.DefaultCamera.UpDirection = new Vector3D(0, 0, 1); //pokazuje gdje je gornji dio kamere
             viewPort3D.ShowFrameRate = true; //da vidimo framerate na kojem nam radi program
             viewPort3D.ShowCoordinateSystem = true; //pokazuje nam koordinatne osi
@@ -50,6 +51,7 @@ namespace ProjektHelix3D
             grid.Center = new Point3D(0, 0, 0); //pozicioniramo ju na 0 kao referencu
             viewPort3D.Children.Add(grid); //dodajemo je na viewport
 
+            
 
 
         }
@@ -83,11 +85,11 @@ namespace ProjektHelix3D
             endPoint3D.X = ((Point3D)viewPort3D.CursorPosition).X;
             endPoint3D.Y = ((Point3D)viewPort3D.CursorPosition).Y;
             endPoint3D.Z = ((Point3D)viewPort3D.CursorPosition).Z;
-            pozicijaX.Text = String.Format("X = {0:0.000}\n" +
+            pozicijaX.Text = String.Format(
+                "X = {0:0.000}\n" +
                 "Y = {1:0.000}\n" +
-                "Z = {2:0.000}", endPoint3D.X, endPoint3D.Y, endPoint3D.Z);
-
-
+                "Z = {2:0.000}",
+                endPoint3D.X, endPoint3D.Y, endPoint3D.Z);
             if (oblik != null)
             {
                 switch (oblik.korak)
@@ -102,6 +104,7 @@ namespace ProjektHelix3D
                         oblik.Visina = oblik.Centar.Z - ((Point3D)viewPort3D.CursorPosition).Z;
                         break;
                 }
+
             }
         }
 
@@ -109,6 +112,7 @@ namespace ProjektHelix3D
         //pritisak na lijevu tipku misa
         private void viewPort3D_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
+            
             if (oblik == null)
             {
                 try
@@ -117,20 +121,20 @@ namespace ProjektHelix3D
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Dogodila se greska:" + ex.Message);
+                    System.Windows.MessageBox.Show("Dogodila se greska:" + ex.Message);
                 }
 
-
+                if (operacija != Operacije.Pokazivac)
+                {
+                    oblik.korak = GeometrijskoTijelo.Koraci.Centar;
+                    oblik.Centar = (Point3D)viewPort3D.CursorPosition;
+                    oblik.Nacrtaj(viewPort3D);
+                    oblik.korak = GeometrijskoTijelo.Koraci.Duzina;
+                }
 
             }
-
-            else if (operacija != Operacije.Pokazivac)
+            else if(oblik.GetType()==typeof(Kvadar))
             {
-
-                oblik.korak = GeometrijskoTijelo.Koraci.Centar;
-                oblik.Centar = (Point3D)viewPort3D.CursorPosition;
-                oblik.korak = GeometrijskoTijelo.Koraci.Duzina;
-                oblik.Nacrtaj(viewPort3D);
 
                 switch (oblik.korak)
                 {
@@ -145,7 +149,11 @@ namespace ProjektHelix3D
                         oblik = null;
                         break;
                 }
-
+            }
+            else
+            {
+                oblik.korak = GeometrijskoTijelo.Koraci.Definiran;
+                oblik = null;
             }
         }
         //pustimo lijevu tipku
