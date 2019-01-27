@@ -1,7 +1,0 @@
-D:\Dokumenti\Škola\3. Semestar\OOP1\KosaricaVjezba\KosaricaVjezba\bin\Debug\KosaricaVjezba.exe.config
-D:\Dokumenti\Škola\3. Semestar\OOP1\KosaricaVjezba\KosaricaVjezba\bin\Debug\KosaricaVjezba.exe
-D:\Dokumenti\Škola\3. Semestar\OOP1\KosaricaVjezba\KosaricaVjezba\bin\Debug\KosaricaVjezba.pdb
-D:\Dokumenti\Škola\3. Semestar\OOP1\KosaricaVjezba\KosaricaVjezba\obj\Debug\KosaricaVjezba.csprojAssemblyReference.cache
-D:\Dokumenti\Škola\3. Semestar\OOP1\KosaricaVjezba\KosaricaVjezba\obj\Debug\KosaricaVjezba.csproj.CoreCompileInputs.cache
-D:\Dokumenti\Škola\3. Semestar\OOP1\KosaricaVjezba\KosaricaVjezba\obj\Debug\KosaricaVjezba.exe
-D:\Dokumenti\Škola\3. Semestar\OOP1\KosaricaVjezba\KosaricaVjezba\obj\Debug\KosaricaVjezba.pdb
