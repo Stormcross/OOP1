@@ -12,15 +12,21 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
 
-        <h:HelixViewport3D Name="viewPort3D" Grid.Row="1" Background="WhiteSmoke" MouseLeftButtonDown="viewPort3D_MouseLeftButtonDown" MouseLeftButtonUp="viewPort3D_MouseLeftButtonUp" MouseMove="viewPort3D_MouseMove" />
+        <h:HelixViewport3D Name="viewPort3D" Grid.Row="2" Grid.ColumnSpan="2" Background="WhiteSmoke" MouseLeftButtonDown="viewPort3D_MouseLeftButtonDown" MouseLeftButtonUp="viewPort3D_MouseLeftButtonUp" MouseMove="viewPort3D_MouseMove" />
+        <!--Koordinate-->
 
         <!--tipke za odabir oblika-->
-        <DockPanel LastChildFill="True">
-            <ToolBarTray DockPanel.Dock="Top">
-                <ToolBar>
+        <DockPanel LastChildFill="True" >
+            <ToolBarTray DockPanel.Dock="Top" >
+                <ToolBar Background="Aqua">
                     <Button x:Name="buttonPokazivac" Click="buttonPokazivac_Click">
                         <Image Source="Ikone\pokazivac.png" />
                     </Button>
@@ -33,8 +39,8 @@
                     <Button x:Name="buttonSfera" Click="buttonSfera_Click" >
                         <Image Source="Ikone\sfera.png" />
                     </Button>
-
                 </ToolBar>
+                <!--Biranje boja-->
                 <ToolBar>
                     <Label Content="Odaberi boju ->"/>
                     <xctk:ColorPicker Name="biranjeBoja" DisplayColorAndName="True" MinWidth="150"  Cursor="Hand">
@@ -46,12 +52,22 @@
                         </xctk:ColorPicker.Background>
                     </xctk:ColorPicker>
                 </ToolBar>
-                <ToolBar>
-                    <Button x:Name="Cut" Command="Cut" Content="Cut" />
+            </ToolBarTray>
+        <!--Donji panel-->
+        </DockPanel>
+        <TextBox Name="pozicijaX" Width="100" 
+                 Grid.Row="0" Grid.Column="1" 
+                 HorizontalAlignment="Right" 
+                 Grid.RowSpan="2"
+                 Background="AliceBlue"/>
+        <!--komande-->
+        <DockPanel LastChildFill="True" Grid.Row="1">
+            <ToolBarTray>
+                <ToolBar Grid.Row="1" Background="BlanchedAlmond">
+                    <Button x:Name="Cut" Command="Cut" Content="Cut"/>
                     <Button x:Name="Copy" Command="Copy" Content="Copy" />
                     <Button x:Name="Paste" Command="Paste" Content="Paste" />
-                    <Button x:Name="Undo" Command="Undo" Content="Undo" Cursor="Hand">
-                    </Button>
+                    <Button x:Name="Undo" Command="Undo" Content="Undo" Cursor="Hand"></Button>
                 </ToolBar>
             </ToolBarTray>
         </DockPanel>

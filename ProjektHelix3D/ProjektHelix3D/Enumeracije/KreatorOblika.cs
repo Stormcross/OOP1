@@ -13,6 +13,8 @@ namespace ProjektHelix3D.Enumeracije
         {
             switch (operacija)
             {
+                //case Operacije.Pokazivac:
+                //    return ;
                 case Operacije.CrtajKvadar:
                     return new Kvadar();
                 case Operacije.CrtajKvadrat:

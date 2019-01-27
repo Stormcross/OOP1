@@ -84,10 +84,7 @@ namespace ProjektHelix3D.GeometrijskaTjela
         }
 
 
-        public override void Nacrtaj(HelixViewport3D hv3d)
-        {
-            hv3d.Items.Add(kvadar); //kvadar dodajemo na internu listu objekata
-        }
+
 
     }
 }

@@ -29,6 +29,8 @@ namespace ProjektHelix3D
         private Operacije operacija = Operacije.Pokazivac;
         private Point3D startPoint3D;
         private Point3D endPoint3D;
+        //koordinate
+        private double x, y, z;
         private GeometrijskoTijelo oblik;
 
         public MainWindow()
@@ -52,78 +54,6 @@ namespace ProjektHelix3D
 
         }
 
-
-        //radnje na ploci
-        //pritisak na lijevu tipku misa
-        private void viewPort3D_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            if (oblik == null)
-            {
-                try
-                {
-                    oblik = KreatorOblika.Vrati(operacija);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Dogodila se greska:" + ex.Message);
-                }
-                
-
-                if (operacija != Operacije.Pokazivac)
-                {
-                    oblik.korak = GeometrijskoTijelo.Koraci.Centar;
-                    oblik.Centar = (Point3D)viewPort3D.CursorPosition;
-                    oblik.korak = GeometrijskoTijelo.Koraci.Duzina;
-                    oblik.Nacrtaj(viewPort3D);
-                }
-            }
-            else
-            {
-
-                switch (oblik.korak)
-                {
-                    //case GeometrijskoTijelo.Koraci.Duzina:
-                    //    oblik.korak = GeometrijskoTijelo.Koraci.Sirina;
-                    //    break;
-                    case GeometrijskoTijelo.Koraci.Sirina:
-                        oblik.korak = GeometrijskoTijelo.Koraci.Visina;
-                        break;
-                    case GeometrijskoTijelo.Koraci.Visina:
-                        oblik.korak = GeometrijskoTijelo.Koraci.Definiran;
-                        oblik= null;
-                        break;
-                }
-
-            }
-        }
-        //pustimo lijevu tipku
-        private void viewPort3D_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            oblik.korak = GeometrijskoTijelo.Koraci.Sirina;
-            //operacija = Operacije.Pokazivac;
-            //oblik = null;
-        }
-        // krecemo mis po podlogi
-        private void viewPort3D_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (oblik != null)
-            {
-                switch (oblik.korak)
-                {
-                    case GeometrijskoTijelo.Koraci.Duzina:
-                        oblik.Duzina = oblik.Centar.Y - ((Point3D)viewPort3D.CursorPosition).Y;
-                        break;
-                    case GeometrijskoTijelo.Koraci.Sirina:
-                        oblik.Sirina = oblik.Centar.X - ((Point3D)viewPort3D.CursorPosition).X;
-                        break;
-                    case GeometrijskoTijelo.Koraci.Visina:
-                        oblik.Visina = oblik.Centar.Z - ((Point3D)viewPort3D.CursorPosition).Z;
-                        break;
-                }
-            }
-        }
-
-
         //buttons
         private void buttonPokazivac_Click(object sender, RoutedEventArgs e)
         {
@@ -144,6 +74,89 @@ namespace ProjektHelix3D
         {
             operacija = Operacije.CrtajKuglu;
         }
+
+        // krecemo mis po podlogi
+        private void viewPort3D_MouseMove(object sender, MouseEventArgs e)
+        {
+            //ispisivanje kordinata kraj misa
+            base.OnMouseMove(e);
+            endPoint3D.X = ((Point3D)viewPort3D.CursorPosition).X;
+            endPoint3D.Y = ((Point3D)viewPort3D.CursorPosition).Y;
+            endPoint3D.Z = ((Point3D)viewPort3D.CursorPosition).Z;
+            pozicijaX.Text = String.Format("X = {0:0.000}\n" +
+                "Y = {1:0.000}\n" +
+                "Z = {2:0.000}", endPoint3D.X, endPoint3D.Y, endPoint3D.Z);
+
+
+            if (oblik != null)
+            {
+                switch (oblik.korak)
+                {
+                    case GeometrijskoTijelo.Koraci.Duzina:
+                        oblik.Duzina = oblik.Centar.Y - ((Point3D)viewPort3D.CursorPosition).Y;
+                        break;
+                    case GeometrijskoTijelo.Koraci.Sirina:
+                        oblik.Sirina = oblik.Centar.X - ((Point3D)viewPort3D.CursorPosition).X;
+                        break;
+                    case GeometrijskoTijelo.Koraci.Visina:
+                        oblik.Visina = oblik.Centar.Z - ((Point3D)viewPort3D.CursorPosition).Z;
+                        break;
+                }
+            }
+        }
+
+        //radnje na ploci
+        //pritisak na lijevu tipku misa
+        private void viewPort3D_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (oblik == null)
+            {
+                try
+                {
+                    oblik = KreatorOblika.Vrati(operacija);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Dogodila se greska:" + ex.Message);
+                }
+
+
+
+            }
+
+            else if (operacija != Operacije.Pokazivac)
+            {
+
+                oblik.korak = GeometrijskoTijelo.Koraci.Centar;
+                oblik.Centar = (Point3D)viewPort3D.CursorPosition;
+                oblik.korak = GeometrijskoTijelo.Koraci.Duzina;
+                oblik.Nacrtaj(viewPort3D);
+
+                switch (oblik.korak)
+                {
+                    case GeometrijskoTijelo.Koraci.Duzina:
+                        oblik.korak = GeometrijskoTijelo.Koraci.Sirina;
+                        break;
+                    case GeometrijskoTijelo.Koraci.Sirina:
+                        oblik.korak = GeometrijskoTijelo.Koraci.Visina;
+                        break;
+                    case GeometrijskoTijelo.Koraci.Visina:
+                        oblik.korak = GeometrijskoTijelo.Koraci.Definiran;
+                        oblik = null;
+                        break;
+                }
+
+            }
+        }
+        //pustimo lijevu tipku
+        private void viewPort3D_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            //operacija = Operacije.Pokazivac;
+            //oblik = null;
+        }
+
+
+
 
     }
 }

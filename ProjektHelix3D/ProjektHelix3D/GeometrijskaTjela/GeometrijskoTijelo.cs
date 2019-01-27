@@ -5,18 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 using HelixToolkit.Wpf;
 using System.Windows.Media.Media3D;
+using System.Windows.Media;
 
 namespace ProjektHelix3D.GeometrijskaTjela
 {
     class GeometrijskoTijelo
     {
         //zajednicke stvari
-        //protected Point3D startPoint;
-        //protected Point3D endPoint;
-
-
-
-        public virtual void Nacrtaj(HelixViewport3D hv3d) { }
+        protected Point3D startPoint; //pocetna tocka
+        protected Point3D endPoint; //zavrsna tocka
+        protected MeshElement3D oblik; //oblik koji postavljamo
+        protected Brush boja; //boja ispune
+        protected HelixViewport3D hv3d; //podloga na kojoj radimo
 
         public enum Koraci
         {
@@ -26,7 +26,26 @@ namespace ProjektHelix3D.GeometrijskaTjela
             Duzina,
             Visina,
             Definiran
-        };
+        }; //pokusamo ovo izbaciti van
+
+        public void Postavi(Point3D pocetak,Point3D kraj,Brush bojaIspune)
+        {
+            startPoint = pocetak;
+            endPoint = kraj;
+            boja = bojaIspune;
+        }
+
+        
+        //metoda za prikaz na podlogi
+        public virtual void Nacrtaj()
+        {
+            //ako oblik koji crtamo nije na podlogi prvo ga dodaj
+            if (hv3d.Children.Contains(oblik))
+            {
+                hv3d.Children.Add(oblik); //oblik dodajemo na internu listu objekata
+            }
+            oblik.Fill = boja;
+        }
 
         public Koraci korak { get; set; } = Koraci.Nedifiniran;
 
