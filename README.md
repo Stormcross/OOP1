@@ -3,7 +3,7 @@ Vjezba i zadaci iz predmeta Objektno Orijentirano programiranje 1
 
 Napravljen program za 3D modeliranje
 log:
-*implementirano modeliranje kvadrat, kugla i kvadar\n
+*implementirano modeliranje kvadrat, kugla i kvadar
 *postavljene tipke za kontrolu
 *citanje kordinata
 *citanje fps kako se vrti program
