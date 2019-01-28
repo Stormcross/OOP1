@@ -51,7 +51,7 @@ namespace ProjektHelix3D
             grid.Center = new Point3D(0, 0, 0); //pozicioniramo ju na 0 kao referencu
             viewPort3D.Children.Add(grid); //dodajemo je na viewport
 
-            
+
 
 
         }
@@ -108,13 +108,30 @@ namespace ProjektHelix3D
 
             }
         }
-
         private void Undo_Click(object sender, RoutedEventArgs e)
         {
             //brisanje elemenata UNDO
-            if (viewPort3D.Items.Count>0)
+            if (viewPort3D.Items.Count > 0)
             {
+                Random rnd = new Random();
+                Visual3D item =(Visual3D) viewPort3D.Items.GetItemAt(viewPort3D.Items.Count - 1);
+
+                item.SetName(rnd.Next(1,99999999).ToString());
                 viewPort3D.Items.RemoveAt(viewPort3D.Items.Count - 1);
+                viewPort3Dhidden.Items.Add(item);
+            }
+        }
+
+        private void Redo_Click(object sender, RoutedEventArgs e)
+        {
+            if (viewPort3Dhidden.Items.Count >0)
+            {
+               
+                Visual3D item =(Visual3D) viewPort3Dhidden.Items.GetItemAt(viewPort3Dhidden.Items.Count-1);
+                
+                viewPort3Dhidden.Items.RemoveAt(viewPort3Dhidden.Items.Count - 1);
+                viewPort3D.Items.Add(item);
+
             }
         }
 
@@ -122,7 +139,7 @@ namespace ProjektHelix3D
         //pritisak na lijevu tipku misa
         private void viewPort3D_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            
+
             if (oblik == null)
             {
                 try
@@ -143,7 +160,7 @@ namespace ProjektHelix3D
                 }
 
             }
-            else if(oblik.GetType()==typeof(Kvadar))
+            else if (oblik.GetType() == typeof(Kvadar))
             {
 
                 switch (oblik.korak)
@@ -164,8 +181,9 @@ namespace ProjektHelix3D
             {
                 oblik.korak = GeometrijskoTijelo.Koraci.Definiran;
                 oblik = null;
+
             }
-            
+
 
 
 
@@ -177,7 +195,7 @@ namespace ProjektHelix3D
             //oblik = null;
         }
 
-        
+
 
 
     }

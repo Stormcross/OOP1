@@ -20,7 +20,9 @@
             <ColumnDefinition Width="100"/>
         </Grid.ColumnDefinitions>
 
+        <h:HelixViewport3D Name="viewPort3Dhidden" Opacity="0" Grid.Row="2" Grid.ColumnSpan="2" Background="WhiteSmoke" MouseLeftButtonDown="viewPort3D_MouseLeftButtonDown" MouseLeftButtonUp="viewPort3D_MouseLeftButtonUp" MouseMove="viewPort3D_MouseMove" />
         <h:HelixViewport3D Name="viewPort3D" Grid.Row="2" Grid.ColumnSpan="2" Background="WhiteSmoke" MouseLeftButtonDown="viewPort3D_MouseLeftButtonDown" MouseLeftButtonUp="viewPort3D_MouseLeftButtonUp" MouseMove="viewPort3D_MouseMove" />
+
         <!--Koordinate-->
 
         <!--tipke za odabir oblika-->
@@ -68,6 +70,7 @@
                     <Button x:Name="Copy" Command="Copy" Content="Copy" />
                     <Button x:Name="Paste" Command="Paste" Content="Paste" />
                     <Button x:Name="Undo"  Content="Undo" Click="Undo_Click"/>
+                    <Button x:Name="Redo"  Content="Redo" Click="Redo_Click" />
                 </ToolBar>
             </ToolBarTray>
         </DockPanel>
