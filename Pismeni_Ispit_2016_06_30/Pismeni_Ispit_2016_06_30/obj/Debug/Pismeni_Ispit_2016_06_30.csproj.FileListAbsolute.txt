@@ -5,3 +5,10 @@ D:\Dokumenti\Programski kod - GIT\OOP1\Pismeni_Ispit_2016_06_30\Pismeni_Ispit_20
 D:\Dokumenti\Programski kod - GIT\OOP1\Pismeni_Ispit_2016_06_30\Pismeni_Ispit_2016_06_30\obj\Debug\Pismeni_Ispit_2016_06_30.csproj.CoreCompileInputs.cache
 D:\Dokumenti\Programski kod - GIT\OOP1\Pismeni_Ispit_2016_06_30\Pismeni_Ispit_2016_06_30\obj\Debug\Pismeni_Ispit_2016_06_30.exe
 D:\Dokumenti\Programski kod - GIT\OOP1\Pismeni_Ispit_2016_06_30\Pismeni_Ispit_2016_06_30\obj\Debug\Pismeni_Ispit_2016_06_30.pdb
+F:\GIT\OOP1\Pismeni_Ispit_2016_06_30\Pismeni_Ispit_2016_06_30\bin\Debug\Pismeni_Ispit_2016_06_30.exe.config
+F:\GIT\OOP1\Pismeni_Ispit_2016_06_30\Pismeni_Ispit_2016_06_30\bin\Debug\Pismeni_Ispit_2016_06_30.exe
+F:\GIT\OOP1\Pismeni_Ispit_2016_06_30\Pismeni_Ispit_2016_06_30\bin\Debug\Pismeni_Ispit_2016_06_30.pdb
+F:\GIT\OOP1\Pismeni_Ispit_2016_06_30\Pismeni_Ispit_2016_06_30\obj\Debug\Pismeni_Ispit_2016_06_30.csprojAssemblyReference.cache
+F:\GIT\OOP1\Pismeni_Ispit_2016_06_30\Pismeni_Ispit_2016_06_30\obj\Debug\Pismeni_Ispit_2016_06_30.csproj.CoreCompileInputs.cache
+F:\GIT\OOP1\Pismeni_Ispit_2016_06_30\Pismeni_Ispit_2016_06_30\obj\Debug\Pismeni_Ispit_2016_06_30.exe
+F:\GIT\OOP1\Pismeni_Ispit_2016_06_30\Pismeni_Ispit_2016_06_30\obj\Debug\Pismeni_Ispit_2016_06_30.pdb

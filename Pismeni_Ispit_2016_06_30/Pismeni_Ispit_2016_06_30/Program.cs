@@ -17,20 +17,40 @@ namespace Pismeni_Ispit_2016_06_30
             Osoba o3 = new Osoba("99887766554", "Nikola", "Nikic");
 
             //Ispis osoba
-            Console.WriteLine(o1.ispisiPodatke());
-            Console.WriteLine(o2.ispisiPodatke());
-            Console.WriteLine(o3.ispisiPodatke());
-            
+            o1.ispisiPodatke();
+            o2.ispisiPodatke();
+            o3.ispisiPodatke();
+
             //Novi OIB
-            UnesiNoviOIB(o1);
+            //UnesiNoviOIB(o1); 
 
             //1.6.2
             Console.WriteLine(ProvjeraImePrezime(o2, o3));
             //Zavrseno 1.## dio ispita
 
-            Student student = new Student("11311178911", "Ivo", "Ivic");
-            Console.WriteLine(student.ispisiPodatke());
+            Student student = new Student("11311178911", "Ivo", "Ivic"); //Dodan novi student
 
+            student.DodajOcjenuZaPredmet("Hrvatski", 3);
+            student.DodajOcjenuZaPredmet("Hrvatski", 2);
+            student.DodajOcjenuZaPredmet("Hrvatski", 1);
+            student.DodajOcjenuZaPredmet("Hrvatski", 4);
+            student.DodajOcjenuZaPredmet("Hrvatski", 4);
+            student.DodajOcjenuZaPredmet("Hrvatski", 4);
+
+            student.DodajOcjenuZaPredmet("Matematika", 2);
+            student.DodajOcjenuZaPredmet("Matematika", 3);
+
+            student.DodajOcjenuZaPredmet("Fizika", 5);
+            student.DodajOcjenuZaPredmet("Fizika", 4);
+            student.DodajOcjenuZaPredmet("Fizika", 2);
+
+            student.DodajOcjenuZaPredmet("Tjelesni", 2);
+            student.DodajOcjenuZaPredmet("Tjelesni", 3);
+
+
+
+
+            student.ispisiPodatke();
 
 
             Console.Read(); //dodano da sprijecimo gasenje programa

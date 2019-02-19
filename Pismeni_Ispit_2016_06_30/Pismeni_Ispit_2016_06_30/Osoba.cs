@@ -51,9 +51,9 @@ namespace Pismeni_Ispit_2016_06_30
             else return String.Format("Greska pri unosu OIB-a");
         }
 
-        public virtual string ispisiPodatke() //1.4
+        public virtual void ispisiPodatke() //1.4
         {
-            return String.Format("Info: {0,4} {1,4} Oib: {2}", Ime, Prezime, OIB);
+            Console.WriteLine("Info: {0,4} {1,4} Oib: {2}", Ime, Prezime, OIB);
         }
 
         public bool Equals(Osoba other) //1.5
