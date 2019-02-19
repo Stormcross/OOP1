@@ -9,6 +9,7 @@ log:
 *citanje fps kako se vrti program
 *dodana funkcionalnost na "Undo"
 *moguce biranje boje
+*dodana Redo Funkcija
 
 to do:
 *dodati oznacavanje modela koji su nacrtani
