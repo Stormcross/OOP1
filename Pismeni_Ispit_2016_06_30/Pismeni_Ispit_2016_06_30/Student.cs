@@ -22,7 +22,7 @@ namespace Pismeni_Ispit_2016_06_30
 
         private void DodajOcjenu(string naziv, int ocjena)
         {
-            Console.Write("\nStudentu {0} dodana je ocjena: {1} za predmet: {2}",Ime,ocjena, naziv);
+            Console.Write("\nStudentu {0} dodana je ocjena: {1} za predmet: {2}", Ime, ocjena, naziv);
             OcjenaPredmeta.Add(ocjena);
         }
 
@@ -31,22 +31,23 @@ namespace Pismeni_Ispit_2016_06_30
             if (Predmeti.Count == 0)
             {
                 Predmeti.Add(nazivPredmeta);
-                if (brojOcjena.Count==0)
+                if (brojOcjena.Count == 0)
                 {
                     brojOcjena.Add(1);
                     DodajOcjenu(nazivPredmeta, ocjena);
 
                 }
-                
+
 
             }
             else
             {
-
+                bool test = false;
                 for (int i = 0; i < Predmeti.Count; i++)
                 {
-                    if (nazivPredmeta.Equals(Predmeti[i]))
+                    if (String.Equals(nazivPredmeta, Predmeti[i]))
                     {
+                        test = true;
                         if (brojOcjena[i] < 5)
                         {
                             DodajOcjenu(nazivPredmeta, ocjena);
@@ -57,36 +58,55 @@ namespace Pismeni_Ispit_2016_06_30
                             Console.WriteLine("\nVec ste unjeli max 5 ocjena za taj predmet");
                             continue;
                         }
-
-
                     }
-                    else
+                    else if (i == Predmeti.Count - 1 && test == false)
                     {
                         Predmeti.Add(nazivPredmeta);
-
+                        brojOcjena.Add(0);
+                        Console.WriteLine("\n");
                     }
-
-
                 }
             }
-
         }
 
         private void ProcitajOcjene(int r, string pred)
         {
+            double  pros= 0;
             int brojPrijasnjihOcjena = 0;
             for (int i = 0; i < r; i++)
             {
                 brojPrijasnjihOcjena += brojOcjena[i];
+
+
+            }
+            if (r==0)
+            {
+                
+                for (int j = 0; j < brojOcjena[r]; j++)
+                {
+                    pros += (double)OcjenaPredmeta[j];
+                }
+                pros /= brojOcjena[r];
+
+                Console.WriteLine("Predmet: {0}, ocjena: {1}", pred,pros);
+            }
+            else
+            {
+                int granica = brojOcjena[r] + brojPrijasnjihOcjena;
+                for (int j = brojPrijasnjihOcjena ; j < granica; j++)
+                {
+                    pros += (double)OcjenaPredmeta[j];
+
+                }
+                pros /= brojOcjena[r];
+                Console.WriteLine("Predmet: {0}, ocjena: {1:0.00}", pred,pros);
             }
 
-            for (int i = brojPrijasnjihOcjena; i < brojOcjena[r] ; i++)
-            {
-                Console.WriteLine("Predmet: {0}, ocjena: {1}",pred,OcjenaPredmeta[i]);
-            }
+
+
         }
 
-        //prouciti i nastaviti
+        
 
         public override void ispisiPodatke()
         {
@@ -95,10 +115,10 @@ namespace Pismeni_Ispit_2016_06_30
             int i = 0;
             foreach (string pred in Predmeti)
             {
-                ProcitajOcjene(i,pred);
+                ProcitajOcjene(i, pred);
                 i++;
             }
-            
+
         }
 
 
