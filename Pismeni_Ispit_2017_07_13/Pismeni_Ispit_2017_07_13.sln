@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pismeni_Ispit_2017_07_13", "Pismeni_Ispit_2017_07_13\Pismeni_Ispit_2017_07_13.csproj", "{FB316ABC-A692-4612-93BE-1D3B2F74FEF3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB316ABC-A692-4612-93BE-1D3B2F74FEF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB316ABC-A692-4612-93BE-1D3B2F74FEF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB316ABC-A692-4612-93BE-1D3B2F74FEF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB316ABC-A692-4612-93BE-1D3B2F74FEF3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {28C6289D-7384-40D1-9C53-76309583F93C}
+	EndGlobalSection
+EndGlobal
