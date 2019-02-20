@@ -1,0 +1,7 @@
+D:\Dokumenti\Programski kod - GIT\OOP1\DomaVjezba\Razlomak_Tocka\Razlomak_Tocka\bin\Debug\Razlomak_Tocka.exe.config
+D:\Dokumenti\Programski kod - GIT\OOP1\DomaVjezba\Razlomak_Tocka\Razlomak_Tocka\bin\Debug\Razlomak_Tocka.exe
+D:\Dokumenti\Programski kod - GIT\OOP1\DomaVjezba\Razlomak_Tocka\Razlomak_Tocka\bin\Debug\Razlomak_Tocka.pdb
+D:\Dokumenti\Programski kod - GIT\OOP1\DomaVjezba\Razlomak_Tocka\Razlomak_Tocka\obj\Debug\Razlomak_Tocka.csprojAssemblyReference.cache
+D:\Dokumenti\Programski kod - GIT\OOP1\DomaVjezba\Razlomak_Tocka\Razlomak_Tocka\obj\Debug\Razlomak_Tocka.csproj.CoreCompileInputs.cache
+D:\Dokumenti\Programski kod - GIT\OOP1\DomaVjezba\Razlomak_Tocka\Razlomak_Tocka\obj\Debug\Razlomak_Tocka.exe
+D:\Dokumenti\Programski kod - GIT\OOP1\DomaVjezba\Razlomak_Tocka\Razlomak_Tocka\obj\Debug\Razlomak_Tocka.pdb
